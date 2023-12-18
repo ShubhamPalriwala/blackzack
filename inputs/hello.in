@@ -1,0 +1,3 @@
+// The program input for hello/src/main.leo
+[main]
+caller: address = aleo1vwcvaf83rzsv29s02zk8zgp4k4x8uxkqd0rlqpl9qvynyzq3d58qysas9a;
