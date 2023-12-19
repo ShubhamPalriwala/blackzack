@@ -6,9 +6,8 @@
 
 ### Prerequisites
 
-- Rust
-- Cargo
-- SnarkVM
+- [Rust](https://www.rust-lang.org/tools/install)
+- [SnarkVM](https://developer.aleo.org/aleo/installation)
 
 ## Playing the game
 
