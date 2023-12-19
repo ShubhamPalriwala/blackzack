@@ -11,13 +11,20 @@
 
 ## Playing the game
 
-1. Give permissions to the script
+1. Clone & cd into the repo
+
+```bash
+git clone https://github.com/ShubhamPalriwala/blackzack.git
+cd blackzack
+```
+
+2. Give permissions to the script
 
 ```bash
 chmod +x ./blackzk.sh
 ```
 
-2. Run the script
+3. Run the script
 
 ```bash
 ./blackzk.sh
