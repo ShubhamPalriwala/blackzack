@@ -1,6 +1,0 @@
-// The program input for hello/src/main.leo
-[main]
-caller: address = aleo1vwcvaf83rzsv29s02zk8zgp4k4x8uxkqd0rlqpl9qvynyzq3d58qysas9a;
-final_score: u8 = 20u8;
-bet_amount: u8 = 100u8;
-bet_amount: u8 = 21u8;

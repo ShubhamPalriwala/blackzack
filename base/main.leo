@@ -1,11 +1,11 @@
-program hello.aleo {
+program blackzk.aleo {
     mapping user_balances: address => u8;
 
-    transition main(caller: address, final_score: u8, bet_amount: u8, dealer_number: u8) {
+    transition blackzk(caller: address, final_score: u8, bet_amount: u8, dealer_number: u8) {
         return then finalize(caller, final_score, bet_amount, dealer_number);
     }
 
-    finalize main(caller: address, final_score: u8, bet_amount: u8, dealer_number: u8) {
+    finalize blackzk(caller: address, final_score: u8, bet_amount: u8, dealer_number: u8) {
         let current_balance: u8 = Mapping::get_or_use(user_balances, caller, 0u8);
 
         if final_score > 21u8 {

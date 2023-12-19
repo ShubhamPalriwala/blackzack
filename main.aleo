@@ -1,25 +1,18 @@
-program hello.aleo;
-
-
-
-mapping random_number_storage:
-	key as address.public;
-	value as u8.public;
-
+program blackzk.aleo;
 
 mapping user_balances:
 	key as address.public;
 	value as u8.public;
 
-function main:
+function blackzk:
     input r0 as address.private;
     input r1 as u8.private;
     input r2 as u8.private;
     input r3 as u8.private;
-    async main r0 r1 r2 r3 into r4;
-    output r4 as hello.aleo/main.future;
+    async blackzk r0 r1 r2 r3 into r4;
+    output r4 as blackzk.aleo/blackzk.future;
 
-finalize main:
+finalize blackzk:
     input r0 as address.public;
     input r1 as u8.public;
     input r2 as u8.public;
