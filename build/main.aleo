@@ -6,14 +6,37 @@ mapping random_number_storage:
 	key as address.public;
 	value as u8.public;
 
+
+mapping user_balances:
+	key as address.public;
+	value as u8.public;
+
 function main:
     input r0 as address.private;
-    async main r0 into r1;
-    output r1 as hello.aleo/main.future;
+    input r1 as u8.private;
+    input r2 as u8.private;
+    input r3 as u8.private;
+    async main r0 r1 r2 r3 into r4;
+    output r4 as hello.aleo/main.future;
 
 finalize main:
     input r0 as address.public;
-    rand.chacha into r1 as u8;
-    rem r1 13u8 into r2;
-    add r2 1u8 into r3;
-    set r3 into random_number_storage[r0];
+    input r1 as u8.public;
+    input r2 as u8.public;
+    input r3 as u8.public;
+    get.or_use user_balances[r0] 0u8 into r4;
+    gt r1 21u8 into r5;
+    sub r4 r2 into r6;
+    set r6 into user_balances[r0];
+    gt r3 21u8 into r7;
+    mul r2 2u8 into r8;
+    add r4 r8 into r9;
+    set r9 into user_balances[r0];
+    gt r1 r3 into r10;
+    mul r2 2u8 into r11;
+    add r4 r11 into r12;
+    set r12 into user_balances[r0];
+    is.eq r1 r3 into r13;
+    set r4 into user_balances[r0];
+    sub r4 r2 into r14;
+    set r14 into user_balances[r0];
